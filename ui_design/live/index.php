@@ -9,13 +9,14 @@
 
    <?php include_once "sidebar_stuff.php" ?>
 
-
+   <?php
+      echo ?>
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Plain Page</h3>
+                <h3>Clock-in</h3>
               </div>
 
               <div class="title_right">
@@ -36,26 +37,73 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Plain Page</h2>
+                    <h2> Time: </h2>
+
                     <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      <!--<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> -->
                       </li>
-                      <li class="dropdown">
+                      <!--<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
+                         <ul class="dropdown-menu" role="menu">
                           <li><a href="#">Settings 1</a>
                           </li>
                           <li><a href="#">Settings 2</a>
                           </li>
                         </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>-->
+                      <!--<li><a class="close-link"><i class="fa fa-close"></i></a> -->
                       </li>
                     </ul>
+                    <h2>
+
+
+
+                    <script type="text/javascript">
+
+                    function GetClock(){
+                    var d=new Date();
+                    var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+                    var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+                    if(nhour==0){ap=" AM";nhour=12;}
+                    else if(nhour<12){ap=" AM";}
+                    else if(nhour==12){ap=" PM";}
+                    else if(nhour>12){ap=" PM";nhour-=12;}
+
+                    if(nmin<=9) nmin="0"+nmin;
+
+                    document.getElementById('clockbox').innerHTML="<center> <h2> &nbsp; "+ (nmonth+1)+"."+ndate+"."+nyear+" "+nhour+":"+nmin+ap+"</h2></center>";
+                    }
+
+                    window.onload=function(){
+                    GetClock();
+                    setInterval(GetClock,1000);
+                    }
+                    </script>
+                  </h2>
+
+                    <div id="clockbox"></div>
+
                     <div class="clearfix"></div>
                   </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12"> Who are you?
+                    <div class="col-md-9 col-sm-9 col-xs-12" >
+                      <select class="select2_single form-control" tabindex="-1">
+                        <option></option>
+                        <option value="Shaine">Shaine</option>
+                        <option value="Christian">Christian</option>
+                        <option value="Diana">Diana</option>
+                        <option value="Allen">Allen</option>
+
+                      </select>
+                    </div>
+                  </div>
+
                   <div class="x_content">
-                      Add content to the page ...
+
+                      <button type="button" class="btn btn-round btn-default">Submit</button>
+
                   </div>
                 </div>
               </div>

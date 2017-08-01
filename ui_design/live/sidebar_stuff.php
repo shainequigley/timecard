@@ -29,9 +29,8 @@
               <h3>General</h3>
               <ul class="nav side-menu">
 
-                <li><a href="clock_in.php" ><i class="fa fa-home"></i> Clock-in <!--<span class="fa fa-chevron-down"></span>--></a></li>
-                <li><a href="manage_timesheet.php" ><i class="fa fa-home"></i> Clock-in <!--<span class="fa fa-chevron-down"></span>--></a> </li>
-                <li><a href="manage_timesheet.php" ><i class="fa fa-home"></i> Manage Timesheets <!--<span class="fa fa-chevron-down"></span>--></a> </li>
+                <li><a href="index.php" ><i class="fa fa-home"></i> Clock-in <!--<span class="fa fa-chevron-down"></span>--></a></li>
+                <li><a href="manage_timesheets.php" ><i class="fa fa-home"></i> Manage Timesheets<!--<span class="fa fa-chevron-down"></span>--></a> </li>
                 <li><a href="manage_employees.php" ><i class="fa fa-home"></i> Manage Employees <!--<span class="fa fa-chevron-down"></span>--></a> </li>
 
                 <!--<li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
