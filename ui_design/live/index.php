@@ -5,12 +5,12 @@
 
    <head>
     <?php include_once "header.php"; ?>
-   </head>
+  </head>
 
    <?php include_once "sidebar_stuff.php" ?>
 
-   <?php
-      echo ?>
+
+
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -86,23 +86,47 @@
                     <div class="clearfix"></div>
                   </div>
 
-                  <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12"> Who are you?
-                    <div class="col-md-9 col-sm-9 col-xs-12" >
-                      <select class="select2_single form-control" tabindex="-1">
-                        <option></option>
-                        <option value="Shaine">Shaine</option>
-                        <option value="Christian">Christian</option>
-                        <option value="Diana">Diana</option>
-                        <option value="Allen">Allen</option>
+<!--
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                  <form class="form-horizontal" role="form" method="POST" action="">
 
-                      </select>
-                    </div>
-                  </div>
+                    <div class="form-group">
+                      <label for="email" class="col-sm-0 control-label">Who are you?</label>
+                      <div class="col-md-9 col-sm-20 col-xs-12-offset-0">
+                        <select class="select2_single form-control" name="employee" tabindex="-1">
+                          <option></option>
+                          <option value="employee">Shaine</option>
+                          <option value="employee">Christian</option>
+                          <option value="employee">Diana</option>
+                          <option value="employee">Allen</option>
+                        </select>
 
+                      </div>
+                      <input type="submit" name="submit">
+                    </div> -->
+                    <form name="mainForm" action="" method="post">
+                          <select name="employee" onchange="Change(this);">
+                              <option selected="Select" value="none">Who are you?</option>
+                            <option value="shaine">shaine</option>
+                            <option value="not shaine">not shaine</option>
+
+                          </select>
+
+
+
+                          <input type="submit" title="Submit"/>
+                        </form>
+
+
+
+
+                       </div>
+                   </div>
+
+                </form>
                   <div class="x_content">
 
-                      <button type="button" class="btn btn-round btn-default">Submit</button>
+                    <?php include_once "/opt/lampp/htdocs/php_stuff/time_submitted.php" ?>
 
                   </div>
                 </div>
